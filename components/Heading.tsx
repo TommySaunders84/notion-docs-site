@@ -8,7 +8,7 @@ interface HeadingProps {
 }
 
 export function Heading({id = '', level = 1, children, className}: HeadingProps) {
-  const Tag = `h${level}` as keyof React.JSX.IntrinsicElements;
+  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
   
   return (
     <>
