@@ -1,0 +1,27 @@
+{
+  "name": "notion-docs-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "dependencies": {
+    "@markdoc/markdoc": "latest",
+    "@markdoc/next.js": "latest",
+    "next": "latest",
+    "next-themes": "^0.2.1",
+    "prismjs": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/prismjs": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  }
+}
