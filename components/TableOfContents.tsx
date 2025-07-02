@@ -1,7 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 
-export function TableOfContents({toc}) {
+interface TocItem {
+  id: string;
+  title: string;
+  level: number;
+}
+
+interface TableOfContentsProps {
+  toc: TocItem[];
+}
+
+export function TableOfContents({toc}: TableOfContentsProps) {
   const items = toc.filter(
     (item) => item.id && (item.level === 2 || item.level === 3)
   );
