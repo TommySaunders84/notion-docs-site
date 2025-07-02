@@ -17,7 +17,13 @@ import type { MarkdocNextJsPageProps } from '@markdoc/next.js'
 const TITLE = 'Notion MCP Documentation';
 const DESCRIPTION = 'Complete documentation for Notion Model Context Protocol integrations with Claude Desktop';
 
-function collectHeadings(node, sections = []) {
+interface Heading {
+  id: string;
+  title: string;
+  level: number;
+}
+
+function collectHeadings(node: any, sections: Heading[] = []): Heading[] {
   if (node) {
     if (node.name === 'Heading') {
       const title = node.children[0];
