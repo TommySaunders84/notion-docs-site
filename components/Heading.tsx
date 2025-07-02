@@ -1,7 +1,14 @@
-import * as React from 'react';
+import React from 'react';
 
-export function Heading({id = '', level = 1, children, className}) {
-  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+interface HeadingProps {
+  id?: string;
+  level?: number;
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export function Heading({id = '', level = 1, children, className}: HeadingProps) {
+  const Tag = `h${level}` as keyof React.JSX.IntrinsicElements;
   
   return (
     <>

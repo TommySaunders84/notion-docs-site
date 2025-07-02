@@ -1,6 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 
-export function SecurityWarning({ children }) {
+interface SecurityWarningProps {
+  children?: React.ReactNode;
+}
+
+export function SecurityWarning({ children }: SecurityWarningProps) {
   return (
     <div className="security-warning">
       <div className="icon">⚠️</div>

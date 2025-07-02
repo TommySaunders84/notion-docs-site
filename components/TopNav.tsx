@@ -2,7 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 
-export function TopNav({children}) {
+interface TopNavProps {
+  children?: React.ReactNode;
+}
+
+export function TopNav({children}: TopNavProps) {
   const { theme, setTheme } = useTheme();
   
   return (

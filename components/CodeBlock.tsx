@@ -1,5 +1,5 @@
 import Prism from 'prismjs';
-import * as React from 'react';
+import React from 'react';
 
 // Import additional languages
 import 'prismjs/components/prism-bash.min';
@@ -10,8 +10,13 @@ import 'prismjs/components/prism-tsx.min';
 import 'prismjs/components/prism-yaml.min';
 import 'prismjs/components/prism-toml.min';
 
-export function CodeBlock({children, 'data-language': language}) {
-  const ref = React.useRef(null);
+interface CodeBlockProps {
+  children: string;
+  'data-language': string;
+}
+
+export function CodeBlock({children, 'data-language': language}: CodeBlockProps) {
+  const ref = React.useRef<HTMLElement>(null);
 
   React.useEffect(() => {
     if (ref.current) Prism.highlightElement(ref.current, false);

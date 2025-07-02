@@ -1,6 +1,12 @@
-import * as React from 'react';
+import React from 'react';
 
-export function Callout({ title, type = 'info', children }) {
+interface CalloutProps {
+  title?: string;
+  type?: 'info' | 'success' | 'warning' | 'error';
+  children?: React.ReactNode;
+}
+
+export function Callout({ title, type = 'info', children }: CalloutProps) {
   const colors = {
     info: 'callout-info',
     success: 'callout-success',
